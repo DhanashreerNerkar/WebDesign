@@ -1,0 +1,306 @@
+/* Mobile-first*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:math;
+}
+
+
+/* Header Styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    color: #0f355e;
+    text-align: center;
+    
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-title {
+   padding: 1rem;
+}
+
+.nav {
+    padding: 0;
+    margin:0;
+    background-color:white;
+
+}
+
+.nav-links {
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.dropup {
+    position: relative;
+    display: inline-block;
+    
+    font-family:math;
+  }
+.dropbtn {
+    background-color:white;
+    padding: 11px;
+    font-size: 16px;
+    border: none;
+    color:#0f355e;
+    font-family:math;
+    font-weight: bolder;
+  }
+  .dropup-content {
+    display: none;
+    position: absolute;
+    background-color:#0f355e;
+    min-width: 11rem;
+    bottom: -120px;
+    z-index: 1;
+  }
+  
+  .dropup-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropup-content a:hover {
+    background-color: white;
+    color:#0f355e;
+    }
+  
+  .dropup:hover .dropup-content {
+    display: block;
+    border-radius: 1rem;;
+  }
+  
+  .dropup:hover .dropbtn {
+    background-color: white;
+    color:#0f355e;
+  }
+  .dropup-content-right {
+    display: none;
+    position: absolute;
+    background-color:#0f355e;
+    min-width: 11rem;
+    bottom: -7.5rem;
+    left: -5.75rem;
+    z-index: 1;
+  }
+
+  .dropup-content-right a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropup-content-right a:hover {
+    background-color: white;
+    color:#0f355e;
+    }
+  
+  .dropup:hover .dropup-content-right {
+    display: block;
+    border-radius: 1rem;   
+  }
+
+
+/* Main Styling */
+.container {
+    height:100%;
+    margin:1rem;
+}
+.main-title{
+    text-align: center;
+    margin:0;
+    margin-bottom: 2rem;
+    width: 100%; 
+    background-color: #0f355e;
+    color:white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px #0f355e;
+}
+.main {
+    padding:0;
+    margin:0;
+    text-align:center;
+    margin-top: 2rem;
+}
+
+.main-container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); 
+    border-radius: 5px;
+    padding: .5rem;
+    height:100%;
+    margin-bottom: 1rem;
+}
+
+.main-field {
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    gap:0;align-items: center;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    background-color:#0f355e;
+    color: white;
+    padding: 1rem;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px #0f355e;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.label {
+    width:20%;
+}
+
+input[type="submit"]:hover {
+    background-color:  #0f355e9f;
+}
+
+.input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.subscribe {
+    margin:0;padding:0;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Footer Section Styling */
+.footer {
+    background-color: #0f355e;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    gap: 0.5rem;
+}
+
+.footer-link {
+    grid-column: span 12; /* For mobile, each link spans the full width */
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.footer-link:hover {
+    background-color: #555;
+}
+
+/* Desktop Styling (breakpoint at 50rem) */
+@media (min-width: 50rem) {
+    /*header*/
+    .logo{
+        height:40%;
+        width:40%;
+    }
+    .logo-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .site-title {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+
+    .nav {
+        padding: 0;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+        padding:-1rem;
+    }
+
+    .nav-link {
+        padding: 0 1rem;
+    }
+
+    .dropup-content {
+        display: none;
+        position: absolute;
+        background-color:#0f355e;
+        min-width: 11rem;
+        bottom: -120px;
+        z-index: 1;
+    }
+
+    .dropup-content-right {
+        display: none;
+        position: absolute;
+        background-color:#0f355e;
+        min-width: 11rem;
+        bottom: -7.5rem;
+        left: -6.188rem;
+        z-index: 1;
+    }    
+    
+    /*footer*/  
+    .footer-container {
+        grid-template-columns: repeat(12, 1fr); 
+    }
+
+    .footer-link {
+        grid-column: span 4;
+        text-align: left;    
+        padding: 0.5rem;
+        text-align: center;  
+    }
+
+    .footer {
+        text-align: center;  
+    }
+
+}

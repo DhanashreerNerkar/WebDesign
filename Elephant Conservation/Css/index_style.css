@@ -1,0 +1,333 @@
+/* Mobile-first*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:math;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    color: #0f355e;
+    text-align: center;
+    
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-title {
+   padding: 1rem;
+}
+
+/* Navigation Styling */
+.nav {
+    padding: 0;
+    margin:0;
+    background-color:white;
+
+}
+
+.nav-links {
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Main Section Styling */
+.main-section {
+    padding: 1rem;
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%; 
+    background-color: #0f355e;
+    color:white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px #0f355e;
+}
+
+/* Card Container Styling */
+.card-container1 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card1 {
+    grid-column: span 12; 
+    background-color:white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-container2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card2 {
+    grid-column: span 12; 
+    background-color:white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-img {
+    max-width: 100%;
+    height:auto;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #0f355e;
+    text-align: center;
+}
+
+.card-text {
+    margin-bottom: 2rem;
+    color: #0f355e;
+    text-align: center;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color:#0f355e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px #0f355e;
+}
+
+.card-button:hover {
+    background-color: #0f355e;
+}
+
+.footer {
+    background-color: #0f355e;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    gap: 0.5rem;
+}
+
+.footer-link {
+    grid-column: span 12; /* For mobile, each link spans the full width */
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.footer-link:hover {
+    background-color: #555;
+}
+.dropup {
+    position: relative;
+    display: inline-block;
+    
+    font-family:math;
+  }
+.dropbtn {
+    background-color:white;
+    padding: 11px;
+    font-size: 16px;
+    border: none;
+    color:#0f355e;
+    font-family:math;
+    font-weight: bolder;
+  }
+  .dropup-content {
+    display: none;
+    position: absolute;
+    background-color:#0f355e;
+    min-width: 11rem;
+    bottom: -120px;
+    z-index: 1;
+  }
+  
+  .dropup-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropup-content a:hover {
+    background-color: white;
+    color:#0f355e;
+    /*color:#0a3a7b;*/
+    }
+  
+  .dropup:hover .dropup-content {
+    display: block;
+    border-radius: 1rem;;
+  }
+  
+  .dropup:hover .dropbtn {
+    background-color: white;
+    color:#0f355e;
+  }
+  .dropup-content-right {
+    display: none;
+    position: absolute;
+    background-color:#0f355e;
+    min-width: 11rem;
+    bottom: -7.5rem;
+    left: -5.75rem;
+    z-index: 1;
+  }
+
+  .dropup-content-right a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropup-content-right a:hover {
+    background-color: white;
+    color:#0f355e;
+    }
+  
+  .dropup:hover .dropup-content-right {
+    display: block;
+    border-radius: 1rem;
+  }
+
+
+/* Desktop Styling (breakpoint at 50rem) */
+@media (min-width: 50rem) {
+    .logo{
+        height:40%;
+        width:40%;
+    }
+    .logo-container {
+        flex-direction: row;
+        /*justify-content: flex-start;
+        align-items: center;*/
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .site-title {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+
+    .nav {
+        padding: 0;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+        padding:-1rem;
+    }
+
+    .nav-link {
+        padding: 0 1rem;
+    }
+
+    .card-container1 {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card1 {
+        grid-column: span 3; /* Each card takes up 4 columns horizontally */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-button {
+        align-self: center; /* Align the button to the same position across cards */
+        margin-top: auto; /* Place the button at the bottom of card */
+    }
+
+    .card-container2 {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card2 {
+        grid-column: span 4; /* Each card takes up 4 columns horizontally */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(12, 1fr); 
+    }
+
+    .footer-link {
+        grid-column: span 4;
+        text-align: left;    
+        padding: 0.5rem;
+        text-align: center;  
+    }
+
+    .footer {
+        text-align: center;  
+    }
+
+    .dropup-content {
+        display: none;
+        position: absolute;
+        background-color:#0f355e;
+        min-width: 11rem;
+        bottom: -120px;
+        z-index: 1;
+      }
+
+      .dropup-content-right {
+        display: none;
+        position: absolute;
+        background-color:#0f355e;
+        min-width: 11rem;
+        bottom: -7.5rem;
+        left: -6.188rem;
+        z-index: 1;
+      }
+}
