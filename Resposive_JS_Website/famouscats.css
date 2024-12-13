@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+/*Desktop*/
+/* Header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:burlywood;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+.title {
+    flex: 1;
+    margin:0% 10%;
+    color:black;
+}
+
+/* Navigation*/
+.nav-links {
+    width: 100%;
+    padding: 10px 0;
+    background-color: burlywood;
+    
+}
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5rem;
+    list-style: none;  
+}
+.nav-links li a {
+    font-size: 1rem;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 1rem;
+    background-color: burlywood;
+    border:none;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color:black;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/*Main*/
+.main-section{
+    padding:1rem;
+    background-color:papayawhip ;
+}
+
+.card-container1 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card1 {
+    grid-column: span 4; 
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    background-color:#eeeeee;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+.card-title {
+    text-align: center;
+    margin: .5rem ;
+}
+.card-img {
+    max-width:200px;
+    height:200px;
+    margin: .5rem;
+    align-self: center;
+}
+.card-button {
+    align-self: center; /* Align the button to the same position across cards */
+    margin-top: auto; /* Place the button at the bottom of card */
+    margin-bottom: .5rem;
+    border:none;
+    border-bottom: 1px solid blue;
+    font-size:1rem;
+    color: blue;
+}
+.card-text {
+    text-align: center;
+    margin:1rem;
+}
+/*Footer*/
+.footer {
+    background-color:  burlywood;
+    padding: 1rem;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+}
+.footer-link {
+    grid-column: span 3;
+    text-align: left;    
+    padding: 0.5rem;
+    text-align: center;  
+}
+.footer {
+    text-align: center;  
+}
+
+/* Mobile (breakpoint at 44rem) */
+@media (max-width: 44rem) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:burlywood;
+        color: #fff;
+        
+    }
+
+    .title {
+        text-align: center;
+        flex: 1;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        background-color: #333;
+        position: absolute;
+        top: 6rem;
+        margin-left: 76%;
+        z-index: 1;
+        padding: 10px 0;
+        background-color: burlywood;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        width: 160%;
+        gap: .5rem;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .hamburger {
+        display: flex;
+    }
+    
+    .card1 {
+        grid-column: span 12; 
+    }
+    .card-title {
+        text-align: left;
+    }
+    .card-img {
+        max-width:100px;
+        height:100px;
+        margin: .5rem;
+        align-self: flex-start;
+    }
+    .card-button {
+        margin-top: auto; /* Place the button at the bottom of card */
+        margin-bottom: .5rem;
+        margin-left: .5rem;
+        align-self: flex-start;
+    }
+    .card-text {
+        text-align: left;
+        margin:1rem;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    }
+    .footer-link {
+        grid-column: span 12; /* For mobile, each link spans the full width */
+        text-align: left;
+        padding: 0.5rem;
+    }
+}

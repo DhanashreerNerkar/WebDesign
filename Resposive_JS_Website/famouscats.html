@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Famous Cats</title>
+        <link rel="stylesheet" href="famouscats.css">
+        <link rel="stylesheet" href="model.css">
+        <script defer src="menu.js"></script>
+        <script defer src="dialog.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Images/catLogo.jpg" alt="Logo">
+                    </a>
+                </div>
+                <h1 class="title">Famous Internet Cats</h1>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="famouscats.html">Famous Cats</a></li>
+                    <li><a href="catevents.html">Cat Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-section">
+            <div class="card-container1">
+                <!-- Card 1 -->
+                <div class="card1">
+                    <h3 class="card-title">Maru</h3>
+                    <img src="Images/cat1.jpg" alt="Maru" class="card-img">
+                    <p class="card-text"> It has a strong, flexible body, quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a solitary hunter and a crepuscular predator. Cat communication includes vocalizations—including meowing, purring, trilling, hissing, growling, and grunting–as well as body language. </p>
+                    <p class="card-text">Please <button type="button" class="card-button open">Subscribe</button> for more details</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card1">
+                    <h3 class="card-title">Jean</h3>
+                    <img src="Images/cat2.jpg" alt="Jean" class="card-img">
+                    <p class="card-text">It is commonly kept as a pet and farm cat, but also ranges freely as a feral cat avoiding human contact. </p>
+                    <p  class="card-text">It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones.</p>
+                    <p class="card-text">Please <button type="button" class="card-button open">Subscribe</button> for more details</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card1">
+                    <h3 class="card-title">Maru</h3>
+                    <img src="Images/cat3.jpg" alt="Maru" class="card-img">
+                    <p class="card-text"> It has a strong, flexible body, quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a solitary hunter and a crepuscular predator. Cat communication includes vocalizations—including meowing, purring, trilling, hissing, growling, and grunting–as well as body language. </p>
+                    <p class="card-text">Please <button type="button" class="card-button open">Subscribe</button> for more details</p>
+                </div>
+            </div>
+            <div class="card-container1">
+                <!-- Card 1 -->
+                <div class="card1">
+                    <h3 class="card-title">Maru</h3>
+                    <img src="Images/cat4.jpg" alt="Maru" class="card-img">
+                    <p class="card-text"> It has a strong, flexible body, quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a solitary hunter and a crepuscular predator. Cat communication includes vocalizations—including meowing, purring, trilling, hissing, growling, and grunting–as well as body language. </p>
+                    <p class="card-text">Please <button type="button" class="card-button open">Subscribe</button> for more details</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card1">
+                    <h3 class="card-title">Grumpy Cat</h3>
+                    <img src="Images/cat5.jpg" alt="Grumpy Cat" class="card-img">
+                    <p class="card-text">It is commonly kept as a pet and farm cat, but also ranges freely as a feral cat avoiding human contact. </p>
+                    <p  class="card-text">It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones.</p>
+                    <p class="card-text">Please <button type="button" class="card-button open">Subscribe</button> for more details</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card1">
+                    <h3 class="card-title">Yedi cat</h3>
+                    <img src="Images/cat6.jpg" alt="Yedi cat" class="card-img">
+                    <p class="card-text"> It has a strong, flexible body, quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a solitary hunter and a crepuscular predator. Cat communication includes vocalizations—including meowing, purring, trilling, hissing, growling, and grunting–as well as body language. </p>
+                    <p class="card-text">Please <button type="button" class="card-button open">Subscribe</button> for more details</p>
+                </div>
+            </div>
+            
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <a href="page1.html" class="footer-link">Privacy Policy</a>
+                <a href="page2.html" class="footer-link">Work for Us</a>
+                <a href="page3.html" class="footer-link">Contact Us</a>
+                <a href="page4.html" class="footer-link">Social Media</a>
+            </div>
+        </footer>
+
+        <dialog class="modal">
+            <div class="overlay">
+                <div class="modal-content">
+                    <h3>Subscribe to the Latest News!</h3>
+                    <form id="subscribe" action="/subscribe">
+                        <div class="form-group">
+                            <label for="email">Email: *required</label> 
+                            <input type="email" id="email" name="email">
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmEmail">Confirm Email: *required</label> 
+                            <input type="email" id="confirmEmail" name="confirmEmail">
+                            <div class="error-message" id="confirmemail-error"></div>
+                        </div>
+                        <div class="button-group">
+                            <input type="submit" value="Subscribe" class="subscribe-btn">
+                            <button type="button" class="cancel-btn close">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </body>
+</html>

@@ -1,0 +1,212 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:papayawhip;
+    font-family: Arial, sans-serif;
+}
+.skip-content{
+    position:absolute;
+    left:-1000px;
+}
+.skip-content:focus{
+    left:50%;
+}
+/*Desktop*/
+/* Header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:burlywood;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+.title {
+    flex: 1;
+    margin:0% 20%;
+    color:black;
+}
+
+/* Navigation*/
+.nav-links {
+    width: 100%;
+    padding: 10px 0;
+    background-color: burlywood;
+    
+}
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5rem;
+    list-style: none;  
+}
+.nav-links li a {
+    font-size: 1rem;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 1rem;
+    background-color: burlywood;
+    border:none;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color:black;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Main*/
+.main-section {
+    padding: 0.5rem;
+    background-color: papayawhip;
+}
+
+/* Card Container*/
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+.card {
+    grid-column: span 12; 
+    background-color:#eeeeee;
+    
+    display: flex;
+    border: 1px solid black;
+}
+
+.card-img {
+    max-width: 200px;
+    max-height: 200px;
+    padding: .5rem; 
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    padding: .5rem; 
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.card-text {
+    margin-bottom: 2rem;
+}
+
+/*Footer*/
+.footer {
+    background-color:  burlywood;
+    padding: 1rem;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+}
+.footer-link {
+    grid-column: span 3;
+    text-align: left;    
+    padding: 0.5rem;
+    text-align: center;  
+}
+.footer {
+    text-align: center;  
+}
+
+/* Mobile (breakpoint at 44rem) */
+@media (max-width: 44rem) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:burlywood;
+        color: #fff;
+        border-bottom: 1px solid black;
+    }
+    .title {
+        text-align: center;
+        flex: 1;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        background-color: #333;
+        position: absolute;
+        top: 6rem;
+        margin-left: 76%;
+        z-index: 1;
+        padding: 10px 0;
+        background-color: burlywood;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 160%;
+        gap: .5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+    .main-section {
+        padding: 0rem;
+        background-color: papayawhip;
+    }
+    .card-container {
+        gap: 0rem;
+    }
+    .card{
+        border-top: none;
+    }
+    .card-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    }
+    .footer-link {
+        grid-column: span 12; /* For mobile, each link spans the full width */
+        text-align: left;
+        padding: 0.5rem;
+    }
+}

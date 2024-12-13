@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:papayawhip;
+    font-family: Arial, sans-serif;
+}
+.skip-content{
+    position:absolute;
+    left:-1000px;
+}
+.skip-content:focus{
+    left:50%;
+}
+/*Desktop*/
+/* Header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:burlywood;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+.title {
+    flex: 1;
+    margin:0% 20%;
+    color:black;
+}
+
+/* Navigation*/
+.nav-links {
+    width: 100%;
+    padding: 10px 0;
+    background-color: burlywood;
+    
+}
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5rem;
+    list-style: none;  
+}
+.nav-links li a {
+    font-size: 1rem;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 1rem;
+    background-color: burlywood;
+    border:none;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color:black;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Main*/
+/* Accordion Container */
+.accordion-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Accordion Item */
+.accordion-item {
+    grid-column: span 12;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Accordion Header */
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background-color: burlywood;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #d1a675;
+}
+
+/* Accordion Content */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+    padding: 0 1rem;
+}
+
+.accordion-content p {
+    margin: 1rem 0;
+}
+
+/* Active Accordion Content */
+.accordion-item.active .accordion-content {
+    max-height: 100px; /* Adjust based on content size */
+}
+
+/*Footer*/
+.footer {
+    background-color:  burlywood;
+    padding: 1rem;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+}
+.footer-link {
+    grid-column: span 3;
+    text-align: left;    
+    padding: 0.5rem;
+    text-align: center;  
+}
+.footer {
+    text-align: center;  
+}
+
+/* Mobile (breakpoint at 44rem) */
+@media (max-width: 44rem) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:burlywood;
+        color: #fff;
+        border-bottom: 1px solid black;
+    }
+    .title {
+        text-align: center;
+        flex: 1;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        background-color: #333;
+        position: absolute;
+        top: 6rem;
+        margin-left: 76%;
+        z-index: 1;
+        padding: 10px 0;
+        background-color: burlywood;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 160%;
+        gap: .5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+    .accordion-item {
+        grid-column: span 12;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    }
+    .footer-link {
+        grid-column: span 12; /* For mobile, each link spans the full width */
+        text-align: left;
+        padding: 0.5rem;
+    }
+}
